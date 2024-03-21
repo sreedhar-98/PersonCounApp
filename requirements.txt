@@ -2,4 +2,4 @@ opencv-python
 numpy
 streamlit
 streamlit_webrtc
-libgl1
+libgl
