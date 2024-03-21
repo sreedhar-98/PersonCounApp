@@ -11,8 +11,7 @@ token=client.tokens.create()
 
 st.title("Person Counter App")
 webrtc_streamer(key="sample", video_frame_callback=callback1,media_stream_constraints={"video":True,"audio":False},
-                rtc_configuration={ "iceServers": token.ice_servers}
-)
+                rtc_configuration={ "iceServers": token.ice_servers})
 
 
  
