@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer,VideoHTMLAttributes
-import streamlit.components.v1 as com
 from test2 import callback1
 
 
