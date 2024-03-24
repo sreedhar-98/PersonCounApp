@@ -2,6 +2,7 @@ import cv2
 import time
 from detect_faces import detect_faces_mobilenetssd
 import av
+import math
 
 def callback1(frame):
     frame=frame.to_ndarray(format="bgr24")
@@ -18,7 +19,7 @@ def callback1(frame):
 
     end_time = time.time()
     fps = 1 / (end_time - start_time)
-    cv2.putText(frame, f"FPS: {fps:.1f}", (10, 60),
+    cv2.putText(frame, f"FPS: {math.ceil(fps)}", (10, 60),
                  cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
     
     return av.VideoFrame.from_ndarray(frame,format="bgr24")
